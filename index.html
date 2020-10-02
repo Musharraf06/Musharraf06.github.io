@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="main-head">
+            <a class="logo" href="/">CODE</a>
+            <span id="menu" class="menu" onclick="show_menu()">&#9776</span>
+            <span id="hidden_menu" style="display: none;">ham</span>
+            <div id="slider_menu" class="slider-menu">
+                <ul class="menu-list">
+                    <li class="slider-menu-list"><a onclick="close_menu()" href="/">Home</a></li>
+                    <li class="slider-menu-list"><a onclick="close_menu()" href="#portfolio">Portfolio</a>
+                    <li class="slider-menu-list"><a onclick="close_menu()" href="#about">About Me</a></li>
+                    </li>
+                    <li class="slider-menu-list"><a onclick="close_menu()" href="#contact">Contact Me</a></li>
+                </ul>
+                <ul class="social-ul">
+                    <!-- <div class="social-header" style="color: hotpink;">My Social Handles</div> -->
+                    <li class="social-list"><a href="" target="_blank"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg"
+                                alt="musharraf" height="30" width="40" /></a></li>
+                    <li class="social-list"><a href="https://www.linkedin.com/mwlite/in/mohammed-musharraf-6875551b8"
+                            target="_blank"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="musharraf"
+                                height="30" width="40" /></a></li>
+                    <li class="social-list"><a href="https://github.com/Musharraf06" target="_blank"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="musharraf06"
+                                height="30" width="40" /></a></li>
+                    <li class="social-list"><a href="https://twitter.com/Musharraf06" target="_blank"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg"
+                                alt="musharraf06" height="30" width="40" /></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="sidebar">
+            <li onclick="set_dot('1')" class="sidebar-dots"><a id="1" style="color: orange;" href="/">.</a></li>
+            <li onclick="set_dot('2')" class="sidebar-dots"><a id="2" href="#portfolio">.</a></li>
+            <li onclick="set_dot('3')" class="sidebar-dots"><a id="3" href="#about">.</a></li>
+            <li onclick="set_dot('4')" class="sidebar-dots"><a id="4" href="#contact">.</a></li>
+        </div>
+
+        <div class="home">
+            <div class="name">
+                <h1>Hi 👋, I'm Mohammed Musharraf</h1>
+            </div>
+            <div class="intro">
+                A passionate developer trying to learn something new everyday.
+            </div>
+        </div>
+
+        <div class="portfolio" id="portfolio">
+            <div class="portfolio-header">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="portfolio-details">
+                <div class="project porject1">Discuss</div>
+                <div class="project porject2">Quiz app</div>
+                <div class="project porject3">Portfolio</div>
+            </div>
+        </div>
+
+        <div class="about" id="about">
+            <div class="about-header">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-details">
+                <!-- <span class="h1">About Me</span> -->
+                <div>I am a BCA graduate completed at Indian Academy Degree COllege. I am punctual, quick
+                    learner and a team player. I have worked on three projects which can be found in my
+                    <a href="#portfolio">portfolio</a> section.
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="about-header">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="contact-details">
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <ul class="social-ul footer-social-ul">
+            <li class="social-list"><a href="" target="_blank"><img
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="musharraf"
+                        height="30" width="40" /></a></li>
+            <li class="social-list"><a href="https://www.linkedin.com/mwlite/in/mohammed-musharraf-6875551b8"
+                    target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
+                        alt="musharraf" height="30" width="40" /></a></li>
+            <li class="social-list"><a href="https://github.com/Musharraf06" target="_blank"><img
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="musharraf06"
+                        height="30" width="40" /></a></li>
+            <li class="social-list"><a href="https://twitter.com/Musharraf06" target="_blank"><img
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="musharraf06"
+                        height="30" width="40" /></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
