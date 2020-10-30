@@ -1,15 +1,13 @@
-:root {
-  --header-height: 3.5rem;
-  --primary-color: royalblue;
-  --secondary-color: #ffffff;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Rubik Mono One", sans-serif;
-  font-family: "Secular One", sans-serif;
-  color: rgba(0, 0, 0, 0.88);
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: "Secular One", sans-serif; */
+  color: rgba(0, 0, 0, 0.81);
   scroll-behavior: smooth;
 }
 
@@ -22,159 +20,328 @@ li {
   list-style: none;
 }
 
+hr {
+  width: 98%;
+}
+
 .h1 {
   display: block;
   font-size: 2em;
-}
-
-.main-head {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  height: var(--header-height);
-  width: 100%;
-  background-color: var(--primary-color);
-  font-size: 1.8rem;
-  z-index: 5;
-}
-
-.logo {
-  display: inline;
-  position: absolute;
-  left: 1rem;
-  color: #000000;
-}
-
-.menu {
-  position: absolute;
-  left: 84rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.menu-list {
-  position: relative;
-  top: 5rem;
-}
-
-.slider-menu {
-  /* display: none; */
-  transform: translateY(-100%);
-  /* transition-duration: 0.4s; */
-  /* transition-property: transform; */
-}
-
-.slider-menu-list {
-  text-align: center;
-  list-style: none;
-  padding: 0.3rem;
-  margin: 1rem;
-  font-size: 1.3rem;
   font-weight: bold;
 }
 
-.show-menu {
-  display: block;
-  margin: auto;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.96);
-  width: 100%;
-  height: 100%;
-  top: var(--header-height);
-  left: 0;
-  z-index: 5;
-  transform: translateY(0);
-  transition-duration: 0.4s;
-  transition-property: transform;
-}
-
-.social-ul {
+.flex {
   display: flex;
-  justify-content: center;
+}
+
+.flex-all {
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  position: relative;
-  top: 7rem;
 }
 
-.social-list {
-  filter: invert(1);
-  padding: 8px;
+.section {
+  color: olivedrab;
+  cursor: pointer;
 }
 
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.28);
+}
+
+.hide {
+  display: none;
+}
+
+.round-hover {
+  border-radius: 50%;
+}
+
+.round-hover:hover {
+  background-color: rgba(0, 0, 0, 0.29);
+}
+
+/* Side bar styles */
+
+.side-menu {
+  position: fixed;
+  height: 100%;
+  width: 11rem;
+}
+
+.side {
+  font-size: 18px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.side:hover {
+  background-color: rgba(0, 0, 0, 0.29);
+}
+
+.top {
+  padding: 16px;
+}
+
+.side-menu-name {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  color: royalblue;
+}
+
+.designation {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: olivedrab;
+  font-weight: bold;
+}
+
+/* Main body styles */
+
+/* Home page styles */
 main {
   position: absolute;
-  top: var(--header-height);
+  top: 3.5rem;
+  width: 86%;
+  left: 11.5rem;
 }
 
-.sidebar {
-  position: fixed;
-  top: 9rem;
-  right: 1rem;
-  width: 3rem;
-  height: max-content;
-  background-color: #06060e;
-  border-radius: 1.5rem;
-}
-
-.sidebar-dots {
-  font-size: 4rem;
-  position: relative;
-  left: 0.8rem;
-  bottom: 0.5rem;
-  cursor: pointer;
+.header {
+  background-color: royalblue;
+  width: 100%;
+  height: 4rem;
+  padding: 25px 0px 0px 10px;
 }
 
 .home {
   text-align: center;
   margin: auto;
-  width: 100%;
-  height: 40rem;
+  /* width: 39%; */
+  height: 43rem;
 }
 
 .intro {
   font-size: 19px;
 }
 
-.portfolio {
-  width: 100%;
-  height: 40rem;
-}
-
-.project {
-  width: 10rem;
-  height: 10rem;
-  border: 2px solid;
-}
-
-/* .portfolio-details {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-} */
+/* About page styles */
 
 .about {
   width: 100%;
-  height: 40rem;
+  height: 43rem;
 }
+
+.objective {
+  padding: 20px 0px 60px 28px;
+}
+
+.vector {
+  position: absolute;
+  background-image: url("./assets/vector.jpg");
+  background-size: cover;
+  width: 20rem;
+  height: 20rem;
+  left: 8%;
+}
+
+.left {
+  display: inline;
+}
+
+.right {
+  float: right;
+  display: inline;
+}
+
+.about-card {
+  position: absolute;
+  right: 1%;
+  width: 40rem;
+  height: 17rem;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 2.5rem;
+  overflow-wrap: normal;
+}
+
+/* Project page styles */
+
+.portfolio {
+  width: 100%;
+  height: 43rem;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateY(20%);
+}
+
+.project {
+  width: 20rem;
+  height: 25rem;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.p1-vector {
+  background-image: url("./assets/project1/img1.png");
+}
+
+.p2-vector {
+  background-image: url("./assets/github.jpg");
+}
+
+.project-vector {
+  background-size: cover;
+  width: 20rem;
+  height: 12rem;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.project-name {
+  display: inline;
+  font-size: 1.3rem;
+  color: olivedrab;
+}
+
+.legend {
+  margin: 19px;
+  font-size: 2rem;
+}
+
+.close-img {
+  margin: 4% 0% 0% 41%;
+}
+
+.tech-used-ul {
+  margin: 1.5rem 0px 2rem 0px;
+}
+
+.tech-used-li {
+  margin: 15px 0px;
+}
+
+.source-code {
+  margin: 0px 0px 0px 2rem;
+}
+
+.more-vert {
+  position: relative;
+  left: 11rem;
+}
+
+.short-intro {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Skills page styles */
+
+.skills {
+  width: 100%;
+  /* height: 43rem; */
+  height: max-content;
+}
+
+.skill-header {
+  font-size: 2.3rem;
+  margin: 10px 0px 0px;
+  padding: 2rem 2rem 7px 2rem;
+}
+
+.skill-container {
+  margin: 3rem auto;
+  width: 80%;
+  height: 18rem;
+  border-radius: 5px;
+}
+
+.skill-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 1rem;
+}
+
+.skill {
+  width: 6rem;
+  height: auto;
+  text-align: center;
+}
+
+.small {
+  width: 9rem;
+}
+
+.backend-clutter {
+  position: relative;
+  bottom: 2rem;
+}
+
+/* Education page styles */
+
+.education {
+  width: 100%;
+  height: 43rem;
+}
+
+.edu-conatiner {
+  margin-top: 2rem;
+}
+
+.edu {
+  width: 30rem;
+  height: 15rem;
+  border-radius: 5px;
+}
+
+.edu3 {
+  margin: 2rem auto;
+}
+
+.school {
+  padding: 1rem 0 1rem 1rem;
+  font-size: 1.25rem;
+}
+
+.school-details {
+  margin: 1rem 0rem 0rem 1rem;
+}
+
+/* Contact page styles */
 
 .contact {
   width: 100%;
-  height: 40rem;
+  height: 43rem;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  background-color: #06060e;
-  color: rgb(151, 150, 148);
-  width: 100%;
-  height: 4rem;
+.social-ul {
+  margin: 4rem 0px 0px 3rem;
 }
 
-.footer-social-ul {
+.social-list {
+  margin: 2rem 0rem;
+  font-size: 1.2rem;
+}
+
+.span-links {
   position: relative;
-  top: 0 !important;
+  bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 700px) {
+  .name {
+    font-size: 0.5rem;
+  }
 }

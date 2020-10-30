@@ -2,116 +2,365 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="assets/favicon.ico" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Mohammed Musharraf | Full-Stack developer</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Secular+One&display=swap"
-        rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="main-head">
-            <a class="logo" href="/">CODE</a>
-            <span id="menu" class="menu" onclick="show_menu()">&#9776</span>
-            <span id="hidden_menu" style="display: none;">ham</span>
-            <div id="slider_menu" class="slider-menu">
-                <ul class="menu-list">
-                    <li class="slider-menu-list"><a onclick="close_menu()" href="/">Home</a></li>
-                    <li class="slider-menu-list"><a onclick="close_menu()" href="#portfolio">Portfolio</a>
-                    <li class="slider-menu-list"><a onclick="close_menu()" href="#about">About Me</a></li>
-                    </li>
-                    <li class="slider-menu-list"><a onclick="close_menu()" href="#contact">Contact Me</a></li>
-                </ul>
-                <ul class="social-ul">
-                    <!-- <div class="social-header" style="color: hotpink;">My Social Handles</div> -->
-                    <li class="social-list"><a href="" target="_blank"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg"
-                                alt="musharraf" height="30" width="40" /></a></li>
-                    <li class="social-list"><a href="https://www.linkedin.com/mwlite/in/mohammed-musharraf-6875551b8"
-                            target="_blank"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="musharraf"
-                                height="30" width="40" /></a></li>
-                    <li class="social-list"><a href="https://github.com/Musharraf06" target="_blank"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="musharraf06"
-                                height="30" width="40" /></a></li>
-                    <li class="social-list"><a href="https://twitter.com/Musharraf06" target="_blank"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg"
-                                alt="musharraf06" height="30" width="40" /></a></li>
-                </ul>
-            </div>
+    <header class="side-menu shadow">
+        <div class="top">
+            <a href="/">
+                <span class="side-menu-name">Mohammed Musharraf</span>
+                <span class="designation">Full-Stack developer</span>
+            </a>
         </div>
-
+        <hr>
+        <div class="side side-menu-about" onclick="jumpTo('about')">
+            <img src="./assets/user-solid.svg" style="color: teal;" alt="about" width="25" height="20">
+            About
+        </div>
+        <div class="side side-menu-project" onclick="jumpTo('portfolio')">
+            Projects
+        </div>
+        <div class="side side-menu-skills" onclick="jumpTo('skills')">
+            <img src="./assets/skills.svg" style="color: teal;" alt="about" width="25" height="20">
+            Skills
+        </div>
+        <div class="side side-menu-skills" onclick="jumpTo('education')">
+            Education
+        </div>
+        <div class="side side-menu-contact" onclick="jumpTo('contact')">
+            Contact
+        </div>
     </header>
     <main>
-        <div class="sidebar">
-            <li onclick="set_dot('1')" class="sidebar-dots"><a id="1" style="color: orange;" href="/">.</a></li>
-            <li onclick="set_dot('2')" class="sidebar-dots"><a id="2" href="#portfolio">.</a></li>
-            <li onclick="set_dot('3')" class="sidebar-dots"><a id="3" href="#about">.</a></li>
-            <li onclick="set_dot('4')" class="sidebar-dots"><a id="4" href="#contact">.</a></li>
-        </div>
-
         <div class="home">
             <div class="name">
                 <h1>Hi 👋, I'm Mohammed Musharraf</h1>
             </div>
-            <div class="intro">
-                A passionate developer trying to learn something new everyday.
-            </div>
         </div>
 
-        <div class="portfolio" id="portfolio">
-            <div class="portfolio-header">
-                <h1>Portfolio</h1>
+        <div class="about">
+            <div class="about-header h1 header">
+                About Me
             </div>
-            <div class="portfolio-details">
-                <div class="project porject1">Discuss</div>
-                <div class="project porject2">Quiz app</div>
-                <div class="project porject3">Portfolio</div>
-            </div>
-        </div>
-
-        <div class="about" id="about">
-            <div class="about-header">
-                <h1>About Me</h1>
-            </div>
-            <div class="about-details">
-                <!-- <span class="h1">About Me</span> -->
-                <div>I am a BCA graduate completed at Indian Academy Degree COllege. I am punctual, quick
-                    learner and a team player. I have worked on three projects which can be found in my
-                    <a href="#portfolio">portfolio</a> section.
+            <div class="about-details h1">
+                <div class="objective">
+                    <span class="section">|</span> A passionate developer trying to learn something new everyday.
+                </div>
+                <div class="vector"></div>
+                <div class="about-card shadow">I am a Full-Stack developer with stong technical skills.
+                    I am proficient in various technologies like Node.js, React.js, MongoDB and <span class="section"
+                        onclick="jumpTo('skills')"><b>others</b></span>.
+                    My curiosity and passion for learning and implementing it has helped me grow as a developer.
+                    My never give up attitude pushes me to meet the deadlines and solve complex problems.
+                    I have worked on various
+                    <span class="section" onclick="jumpTo('portfolio')"><b>projects</b></span>.
+                    I am punctual, quick learner and a team player.
+                    I love problem solving and competitive programming.
+                    I like playing football and I like reading books.
                 </div>
             </div>
         </div>
 
-        <div class="contact" id="contact">
-            <div class="about-header">
-                <h1>Contact Me</h1>
+        <div class="portfolio">
+            <div class="portfolio-header h1 header">
+                Projects
             </div>
-            <div class="contact-details">
+            <div class="project-container">
+                <!-- First project -->
+                <div class="project shadow">
+                    <div class="discuss-hidden">
+                        <div class="project-vector p1-vector" id="project1_img" onclick="details('discuss')"></div>
+                        <div class="left" onclick="changesrc('project1_img', 'left')">
+                            <img src="https://fonts.gstatic.com/s/i/materialiconsoutlined/keyboard_arrow_left/v7/24px.svg?download=true"
+                                class="round-hover" alt="left">
+                        </div>
+                        <div class="right" onclick="changesrc('project1_img', 'right')">
+                            <img src="https://fonts.gstatic.com/s/i/materialiconsoutlined/keyboard_arrow_right/v7/24px.svg?download=true"
+                                class="round-hover" alt="right">
+                        </div>
+                        <div class="short-intro">
+                            <div class="project-name">
+                                Discuss
+                            </div>
+                            <img src="https://fonts.gstatic.com/s/i/materialicons/more_vert/v7/24px.svg?download=true"
+                                class="more-vert round-hover" onclick="details('discuss')" alt="more">
+                            <div class="intro">
+                                An online discussion forum where users can interact and solve each others problems. A
+                                user can ask a question to others or answer other's question.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discuss-hidden2 hide">
+                        <div class="project-name legend">Legend</div>
+                        <img src="https://fonts.gstatic.com/s/i/materialicons/close/v8/24px.svg?download=true"
+                            class="close-img round-hover" onclick="show('discuss')" alt="close" />
+                        <ul class="tech-used-ul">
+                            <li class="tech-used-li">Built using <b>Node.js</b> </li>
+                            <li class="tech-used-li">Design : HTML, CSS, JavaScript</li>
+                            <li class="tech-used-li">Authentication : <b>bcryptjs</b> for password hashing</li>
+                            <li class="tech-used-li">Used <b>sessions</b> for user-sessions</li>
+                            <li class="tech-used-li">Templating Engine : <b>EJS</b></li>
+                            <li class="tech-used-li">Database : <b>MongoDB</b></li>
+                        </ul>
+                        <a href="https://github.com/Musharraf06/Discussion-Forum" class="source-code" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg"
+                                alt="musharraf06" height="30" width="40" />
+                            <span class="span-links">Source Code</span>
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Second project -->
+                <div class="project shadow">
+                    <div class="popquiz-hidden">
+                        <div class="project-vector p2-vector" id="project2_img" onclick="details('popquiz')"></div>
+                        <div class="left" onclick="changesrc('project2_img', 'left')">
+                            <img src="https://fonts.gstatic.com/s/i/materialiconsoutlined/keyboard_arrow_left/v7/24px.svg?download=true"
+                                class="round-hover" alt="left">
+                        </div>
+                        <div class="right" onclick="changesrc('project2_img', 'right')">
+                            <img src="https://fonts.gstatic.com/s/i/materialiconsoutlined/keyboard_arrow_right/v7/24px.svg?download=true"
+                                class="round-hover" alt="right">
+                        </div>
+                        <!-- </div> -->
+                        <div class="short-intro">
+                            <div class="project-name">
+                                Pop Quiz
+                            </div>
+                            <img src="https://fonts.gstatic.com/s/i/materialicons/more_vert/v7/24px.svg?download=true"
+                                class="more-vert round-hover" onclick="details('popquiz')" alt="more">
+                            <div class="intro">
+                                Online quiz app where a user can play random quiz or aptitude quiz.
+                                User can also <b>create</b> new quiz and share it with others.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popquiz-hidden2 hide">
+                        <div class="project-name legend">Legend</div>
+                        <img src="https://fonts.gstatic.com/s/i/materialicons/close/v8/24px.svg?download=true"
+                            class="close-img round-hover" onclick="show('popquiz')" alt="close" />
+                        <ul class="tech-used-ul">
+                            <li class="tech-used-li">Built using <b>Node.js</b> </li>
+                            <li class="tech-used-li">Design : <b>React, materialize css</b> </li>
+                            <li class="tech-used-li">Used react <b>hooks</b> </li>
+                            <li class="tech-used-li">Fetch API : <b>Axios</b></li>
+                            <li class="tech-used-li">Database : <b>MongoDB</b></li>
+                        </ul>
+                        <a href="https://github.com/Musharraf06/pop-quiz" class="source-code" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg"
+                                alt="musharraf06" height="30" width="40" />
+                            <span class="span-links">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project shadow"></div>
             </div>
         </div>
 
+        <div class="skills">
+            <div class="h1 header">
+                Skills
+            </div>
+            <div class="main-skill-container">
+                <div class="skill-container shadow">
+                    <div class="skill-header">Programming languages</div>
+                    <hr>
+                    <div class="skill-content">
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg"
+                                class="skill" alt="">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg"
+                                class="skill" alt="">
+                            <span>C++</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/java/java-original-wordmark.svg"
+                                class="skill" alt="">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container shadow">
+                    <div class="skill-header">Front-end</div>
+                    <hr>
+                    <div class="skill-content">
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original-wordmark.svg"
+                                class="skill" alt="">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/react/react-original-wordmark.svg"
+                                class="skill" alt="">
+                            <span>React</span>
+                        </div>
+                        <div class="skill">
+                            <img src="./assets/ejs.png" class="skill small" alt="">
+                            <span>EJS</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original-wordmark.svg"
+                                class="skill" alt="">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg"
+                                class="skill" alt="">
+                            <span>Materialize css</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container shadow">
+                    <div class="skill-header">Back-end</div>
+                    <hr>
+                    <div class="skill-content">
+                        <div class="skill backend-clutter">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/nodejs/nodejs-original-wordmark.svg"
+                                class="skill small" alt="">
+                            <span>Node Js</span>
+                        </div>
+                        <div class="skill backend-clutter">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/express/express-original-wordmark.svg"
+                                class="skill small" alt="">
+                            <span>Express</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container shadow">
+                    <div class="skill-header">Database</div>
+                    <hr>
+                    <div class="skill-content">
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/mongodb/mongodb-original-wordmark.svg"
+                                class="skill" alt="">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://devicons.github.io/devicon/devicon.git/icons/mysql/mysql-original-wordmark.svg"
+                                class="skill" alt="">
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container shadow">
+                    <div class="skill-header">Other</div>
+                    <hr>
+                    <div class="skill-content">
+                        <div class="skill">
+                            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" class="skill" alt=""
+                                width="10" height="10">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill">
+                            <img src="./assets/github.jpg" class="skill small" alt="">
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" class="skill"
+                                alt="">
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill">
+                            <img src="./assets/npm.png" class="skill" alt="" />
+                            <span>Node package manager</span>
+                        </div>
+                        <div class="skill">
+                            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="skill"
+                                alt="" />
+                            <span>Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education">
+            <div class="edu-header h1 header">
+                Education
+            </div>
+            <div class="edu-conatiner">
+                <div class="flex-all">
+                    <div class="edu edu1 shadow">
+                        <div class="school section"><b>Indian Academy Degree College Autonomous</b></div>
+                        <hr>
+                        <div class="school-details cource">Course : BCA</div>
+                        <div class="school-details grades">CGPA : 8.23</div>
+                        <div class="school-details pass-year">Year of Passing : 2020</div>
+                    </div>
+                    <div class="edu edu2 shadow">
+                        <div class="school section"><b>Indian Academy Pre-university College</b></div>
+                        <hr>
+                        <div class="school-details cource">Course : PCMB</div>
+                        <div class="school-details percent">Percentage : 60%</div>
+                        <div class="school-details pass-year">Year of Passing : 2017</div>
+                    </div>
+                </div>
+                <div class="edu edu3 shadow">
+                    <div class="school section"><b>Shams High School</b></div>
+                    <hr>
+                    <div class="school-details cource">Course : SSLC</div>
+                    <div class="school-details percent">Percentage : 75.04%</div>
+                    <div class="school-details pass-year">Year of Passing : 2015</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="contact-header h1 header">
+                Contact Me
+            </div>
+
+            <div class="contact-details">
+                <ul class="social-ul">
+                    <li class="social-list flex">
+                        <a href="mailto:mohammedmusharraf06@gmail.com" target="_blank">
+                            <img src="https://fonts.gstatic.com/s/i/materialicons/mail/v7/24px.svg?download=true"
+                                alt="musharraf" height="35" width="40" />
+                            <span class="span-links">mohammedmusharraf06@gmail.com</span>
+                        </a>
+                    </li>
+                    <li class="social-list">
+                        <a href="https://github.com/Musharraf06" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg"
+                                alt="musharraf06" height="30" width="40" />
+                            <span class="span-links">github.com/Musharraf06</span>
+                        </a>
+                    </li>
+                    <li class="social-list">
+                        <a href="https://www.linkedin.com/in/musharraf06" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
+                                alt="musharraf" height="30" width="40" />
+                            <span class="span-links">https://www.linkedin.com/in/musharraf06</span>
+                        </a>
+                    </li>
+                    <li class="social-list">
+                        <a href="https://twitter.com/Musharraf06" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg"
+                                alt="musharraf06" height="30" width="40" />
+                            <span class="span-links">https://twitter.com/Musharraf06</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 
+        <div class="resume">
+            <object data="./data.pdf" type="application/pdf" width="50%" height="900">
+                alt : <a href="test.pdf">data.pdf</a>
+            </object>
+        </div> -->
+
     </main>
-    <footer>
-        <ul class="social-ul footer-social-ul">
-            <li class="social-list"><a href="" target="_blank"><img
-                        src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="musharraf"
-                        height="30" width="40" /></a></li>
-            <li class="social-list"><a href="https://www.linkedin.com/mwlite/in/mohammed-musharraf-6875551b8"
-                    target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
-                        alt="musharraf" height="30" width="40" /></a></li>
-            <li class="social-list"><a href="https://github.com/Musharraf06" target="_blank"><img
-                        src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="musharraf06"
-                        height="30" width="40" /></a></li>
-            <li class="social-list"><a href="https://twitter.com/Musharraf06" target="_blank"><img
-                        src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="musharraf06"
-                        height="30" width="40" /></a></li>
-        </ul>
-    </footer>
 </body>
 
 </html>
