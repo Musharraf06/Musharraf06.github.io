@@ -99,6 +99,11 @@ hr {
   font-weight: bold;
 }
 
+.side-bar-logo{
+  width: 2rem;
+  height: auto;
+}
+
 /* Main body styles */
 
 /* Home page styles */

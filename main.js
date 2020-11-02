@@ -72,17 +72,17 @@ var project1 = [
   "url('./assets/project1/img6.png')",
 ];
 var project2 = [
-  "url('./assets/github.jpg')",
-  "url('./assets/vector.jpg')",
-  "url('./assets/npm.png')",
-  "url('./assets/favicon.ico')",
+  // "url('./assets/github.jpg')",
+  // "url('./assets/vector.jpg')",
+  // "url('./assets/npm.png')",
+  // "url('./assets/favicon.ico')",
 ];
 
 const changesrc = (source, direction) => {
   var img = document.getElementById(source);
   switch (source) {
     case "project1_img":
-      if (direction == "left" && project1_index > 0) {
+      if (direction == "left" && project1_index > 0 && project1.length >= 0) {
         project1_index -= 1;
         img.style.backgroundImage = project1[project1_index];
       }
@@ -92,7 +92,7 @@ const changesrc = (source, direction) => {
       }
       break;
     case "project2_img":
-      if (direction === "left" && project2_index >= 0) {
+      if (direction === "left" && project2_index >= 0 && project2.length >= 0) {
         project2_index -= 1;
         img.style.backgroundImage = project2[project2_index];
       }
